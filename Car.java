@@ -43,11 +43,15 @@ public class Car {
      * @return true if the passenger was added, false if the car is full
      */
     public boolean addPassenger(Passenger p) {
-        if (seatsRemaining() > 0) {
-            passengers.add(p);
-            return true;
+        if (passengers.contains(p)){
+            return false;
         } else {
-            return false; 
+            if (seatsRemaining() > 0) {
+                passengers.add(p);
+                return true;
+            } else {
+                return false; 
+            }
         }
     }
 

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Train {
     private Engine engine;
     private ArrayList<Car> cars;
+    private int passengerCapacity;
 
     /**
      * Constructs a Train with the specified fuel type, fuel capacity, number of cars, and passenger capacity per car.
@@ -54,7 +55,7 @@ public class Train {
      * @param passengerCapacity the capacity of a single car
      * @return the maximum total capacity of the train
      */
-    public int getMaxCapacity(int passengerCapacity) {
+    public int getMaxCapacity() {
         return passengerCapacity * cars.size();
     }
 
